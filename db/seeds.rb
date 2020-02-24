@@ -19,3 +19,10 @@ jams.products.create(title: "Raspberry", price: 1)
 
 
 puts "11 products created..."
+
+
+5.times { |n| User.create(email: "user_#{n}@testmail.com") }
+puts "5 Users Created..."
+
+5.times { |n| Role.create(name: "role_#{n}") }
+puts "5 Roles Created..."
