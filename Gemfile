@@ -59,3 +59,4 @@ gem 'devise', '~> 4.2'
 gem 'letter_opener', '~> 1.7', group: [:development]
 gem 'omniauth-google-oauth2', '~> 0.8.0'
 gem "figaro"
+gem 'rolify', '~> 5.0'
