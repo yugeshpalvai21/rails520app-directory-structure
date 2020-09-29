@@ -1,4 +1,4 @@
-# Exploring Rails App Directory Version 5.1.0
+# Exploring Rails App Directory Version 5.2.0
 
 #### App Directory Structure
 
