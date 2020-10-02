@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   get 'pages/set_cookies'
   get 'pages/get_cookies'
   get 'pages/clean_cookies'
+
+  get 'pages/set_session'
+  get 'pages/clean_session'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -14,6 +14,7 @@ class PagesController < ApplicationController
     @client_name = cookies[:client_name]
     @client_location = cookies[:client_location]
     @client_passcode = cookies.permanent.signed[:client_passcode]
+    @session_user_id = session[:user_id]
   end
 
   def clean_cookies
@@ -21,6 +22,18 @@ class PagesController < ApplicationController
     cookies.delete(:client_location)
     cookies.delete(:client_passcode)
 
+    redirect_to pages_get_cookies_path
+  end
+
+
+  def set_session
+    session[:user_id] = 123
+    redirect_to pages_get_cookies_path
+  end
+
+  def clean_session
+    session[:user_id] = nil
+    #reset_session
     redirect_to pages_get_cookies_path
   end
 end
