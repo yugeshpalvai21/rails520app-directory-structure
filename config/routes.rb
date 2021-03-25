@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   root 'pages#home'
+  
+  get '/search', to: 'pages#search'
+  post '/search-results', to: 'pages#search_results'
+
+  namespace :api, constraints: { format: 'json' } do
+    namespace :v1 do
+      resources :articles, only: [:index] 
+    end
+  end
 
   # get 'pages/about'
 
