@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   root 'pages#home'
   
   get '/search', to: 'pages#search'
